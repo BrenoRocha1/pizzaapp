@@ -1,8 +1,19 @@
 @extends('layouts.base')
 @section('content')
 
-<h1> Editar Cargo</h1>
-<form action="{{ route('cargo.update', ['id'=>$cargo->id_cargo]) }}"
+<h1> Produto: {{ $produto->nome}}</h1>
+<h2>
+    {{
+        ($produtoTamanho):
+        'Editar Tamanho'?
+        'Cadastrar Tamanho'
+    }}
+</h2>
+<form action="{{
+            ($ProdutoTamanho)
+            route('cargo.update', ['id'=>$cargo->id_cargo])
+    route('car!id produtoupdate', ['id_produto'=>$cargo->id_cargo]) route('cargo.update', ['id'=>$cargo->id_cargo])
+ }}"
     method="post"
     enctype="multipart/form-data" >
     @csrf
@@ -13,6 +24,7 @@
         $cargo->cargo : old(cargo)
        }}" >
        <input type="submit" value="Atualizar">
+       <select class="form-select" name="id_produto" id="id_produto" ></select>
 </form>
 
 @endsection

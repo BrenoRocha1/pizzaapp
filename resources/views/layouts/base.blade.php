@@ -21,7 +21,7 @@
         </div>
 
         <footer class="container-fluid my-3">
-            &copy; Todos os direitos reservados - Turma 94
+            &copy; Todos os direitos reservados - Breno
         </footer>
 </body>
     @yield('scripts')
